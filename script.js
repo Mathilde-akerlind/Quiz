@@ -30,20 +30,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
         for (const question of questions) { //Loopar igenom varje objekt i vår array 
 
             console.log(question);
-            //console.log(question.correct_answers);
+
             let tr1 = document.createElement("tr");
 
             tr1.append(question.question);
             idTable.append(tr1);
 
 
-            let i = 0;
+
+
+
             button2.addEventListener("click", function(e) {
-                //console.log(question.correct_answers);
-                //console.log(question.correct_answers);
-                //const object = { a: 1, b: 2, c: 3 };
+
                 let nyArray = [];
-                //let i = 0;
 
                 for (const correctA in question.correct_answers) {
                     //console.log(question.correct_answers[correctA]);
@@ -56,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     //console.log(nyArray);
                     //console.log(nyArray.includes(listChecked[i]));
 
-                    console.log(i);
+
                     /*  console.log(nyArray.includes(listChecked[i]));
                      */
 
@@ -64,13 +63,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 //console.log(nyArray);
                 console.log(nyArray.includes(listChecked[i]));
                 console.log("hej");
-                i++;
+                //i++;
                 console.log(i);
 
                 //console.log(nyArray);
                 //console.log(nyArray.includes(listChecked[0]));
 
-
+                i++;
 
             })
 
@@ -103,7 +102,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 })
 
             }
+
         }
+
     }
 
 
