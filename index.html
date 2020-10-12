@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -9,27 +10,35 @@
 </head>
 
 <body>
+    <style>
+        body {
+            background-image: url('bild.jpg');
+        }
+    </style>
+
+    <div id="styleCenter">
 
 
-    <div>
-        <table id="idTable">
 
 
+        <p>Skriv in ditt namn här:</p>
+        <div id="divId"></div>
+        <input type="text" id="name">
 
-            <p>Skriv in ditt namn här:</p>
-            <input type="text" id="name">
-            <button type="button" id="button"> Starta quiz! </button>
-            <button type="button" id="button2"> Rätta Quiz! </button>
-            <br>
-            <br>
-            <div id="divId">
 
-            </div>
+        <button type="button" id="button"> Starta quiz! </button>
 
-        </table>
+        <p>Tryck på rätta när du svarat på frågorna!</p>
+        <button type="button" id="button2"> Rätta Quiz! </button>
+
 
 
     </div>
+    <table id="idTable">
+    </table>
+
+
+
 
 
     <script src="script.js"></script>
