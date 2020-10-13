@@ -1,11 +1,9 @@
 class Game {
     constructor() {
-        fetch('https://quizapi.io/api/v1/questions?apiKey=zCcssysJM1WmEOlki5dtfKxsdFdeC6CidlT8lTq0&category=code&difficulty=Easy&limit=5')
+        fetch('https://quizapi.io/api/v1/questions?apiKey=zCcssysJM1WmEOlki5dtfKxsdFdeC6CidlT8lTq0&category=code&difficulty=Easy&limit=10')
             .then(response => response.json())
             .then(quizQuestions => this.printQuestions(quizQuestions));
     }
-
-
 
 
     printQuestions(questions) {
@@ -14,8 +12,8 @@ class Game {
         let scoreCount = 0;
 
         for (const question of questions) { //Loopar igenom varje objekt, dvs alla svar i själva frågan.
-            //  console.table(question); //woaahh
-            console.log(question);
+
+            //console.log(question);
 
             let tr1 = document.createElement("tr");
             tr1.id = "tr1";
@@ -45,8 +43,6 @@ class Game {
                 tr1.append(tr2);
 
 
-
-
                 checkbox.addEventListener("click", function(e) { // Eventlyssnare på checkbox, kör funktionen 
 
                     addCheckedBox(this, answer, listChecked);
@@ -70,15 +66,14 @@ class Game {
             let button2 = document.getElementById("button2");
             button2.addEventListener("click", function(e) { //Knapp för att rätta svar
 
-
-
                 for (const correctA in question.correct_answers) {
 
                     let cutAndGlueToArray = correctA + "_" + question.correct_answers[correctA];
                     //console.log(cutAndGlueToArray);   //klipp ut key+value för varje objekt, sätt ihop till en ny array
                     nyArray.push(cutAndGlueToArray);
-
                 }
+
+
                 if (nyArray.includes(listChecked[i]) == true) { //Om array innehåller klickat svar, return true, och man får ett poäng
                     //console.log("HEJMAN");
                     scoreCount++;
@@ -94,7 +89,6 @@ class Game {
                     divId.append(" fick " + scoreCount + " poäng!")
                     console.log("i = " + i);
                 }
-
             })
         }
     }

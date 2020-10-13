@@ -19,13 +19,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     })
 
 
-
     button3.addEventListener("click", function(e) {
         location.reload();
     })
 })
 
-class Answer { //Min klass wooo
+class Answer { //Min pytteklass wooo
     constructor(dataAnswer) {
         this.answer_key = dataAnswer;
     }

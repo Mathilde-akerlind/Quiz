@@ -1,14 +1,28 @@
+body,
+html {
+    height: 100%;
+}
+
+#body {
+    background-image: url('bild.jpg');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #styleCenter {
     font-size: 30px;
     text-align: center;
-    font-weight: bold;
+    font-family: "Courier New"
 }
 
 #tr1 {
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 18px;
     border-radius: 5px;
-    height: 140px;
+    height: 150px;
+    font-family: "Courier New"
 }
 
 button {
@@ -16,8 +30,13 @@ button {
     padding: 5px 2px;
     text-align: center;
     background-color: lightpink;
+    font-family: "Courier New"
 }
 
-input {
+.inputText {
+    height: 25px;
+    width: 160px;
+    font-family: "Courier New";
     background-color: lightpink;
+    font-size: 20px;
 }
