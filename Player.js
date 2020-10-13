@@ -1,4 +1,4 @@
- class Player {
+/*  class Player {
      constructor() {
          this.playerName;
 
@@ -7,4 +7,4 @@
          divId.append(nyttNamn);
      }
 
- }
+ } */
