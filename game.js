@@ -77,6 +77,7 @@ class Game {
                     let cutAndGlueToArray = correctA + "_" + question.correct_answers[correctA];
                     //console.log(cutAndGlueToArray);   //klipp ut key+value för varje objekt, sätt ihop till en ny array
                     nyArray.push(cutAndGlueToArray);
+
                 }
                 if (nyArray.includes(listChecked[i]) == true) { //Om array innehåller klickat svar, return true, och man får ett poäng
                     //console.log("HEJMAN");
@@ -93,6 +94,7 @@ class Game {
                     divId.append(" fick " + scoreCount + " poäng!")
                     console.log("i = " + i);
                 }
+
             })
         }
     }
